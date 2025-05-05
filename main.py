@@ -36,12 +36,6 @@ def extract_info(url):
                 '\r','')
     print(title)
 
-    # Достаём автора
-    author = key_inf['author']['name']
-    if author == '':
-        author = 'None'
-    print(author)
-
     # Достаём дату
     date = key_inf['datePublished']
     date = re.sub('T.+', '', date)
@@ -58,7 +52,6 @@ def extract_info(url):
     # Собираем всё воедино
     page_info = {
                 'title': title, 
-                'author': author,
                 'date': date,
                 'url': url,
                 'text': text
