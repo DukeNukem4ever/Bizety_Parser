@@ -38,6 +38,8 @@ def extract_info(url):
 
     # Достаём автора
     author = key_inf['author']['name']
+    if author == '':
+        author = 'None'
     print(author)
 
     # Достаём дату
